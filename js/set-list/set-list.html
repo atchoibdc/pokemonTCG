@@ -1,0 +1,42 @@
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light"><strong>Pokemon TCG Finder</strong></h1>
+        </div>
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col">
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="search" ng-model="q" name="searchSet" id="searchSet" class="form-control"
+                        placeholder="Search Set Names...">
+                </div>
+            </div>
+        </div>
+        <div id="set-list" class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-2">
+            <div class="col set-item" ng-repeat="set in vm.sets | filter:q">
+                <div class="card shadow-sm" data-id="{{ set.id }}">
+                    <div class="card-body" id="{{set.id}}">
+                        <p class="card-text text-center">
+                            <a ng-click="viewSet(set)">
+                                <img src="{{set.images.symbol}}" alt="{{set.name}}" style="width:auto;height: 60px;">
+                                <br>
+                                <strong>{{ set.name }}</strong>
+                            </a>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center d-none">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

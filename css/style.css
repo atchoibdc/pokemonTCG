@@ -1,0 +1,12 @@
+a {
+    text-decoration: none;
+}
+
+#set-list .card:hover {
+    cursor: pointer;
+}
+
+#card-list-wrapper {
+    overflow-y: auto;
+    height: calc(100vh - 66px);
+}

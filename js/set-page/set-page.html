@@ -1,0 +1,18 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-4">
+            <img class="img-fluid mb-3" src="{{ setDetails.images.logo }}" alt="">
+            <h4>{{ setDetails.name }}</h4>
+            <p class="mb-2">Series: <strong>{{ setDetails.series }}</strong></p>
+            <p class="mb-2">Number of Prints: <strong>{{ setDetails.printedTotal }}</strong></p>
+            <p class="mb-2">Release Date: <strong>{{ setDetails.releaseDate }}</strong> </p>
+        </div>
+        <div class="col-8">
+            <div id="card-list-wrapper" class="d-flex justify-content-between align-items-center flex-wrap">
+                <div class="col-4 mb-3 text-center" ng-repeat="card in cards">
+                    <img src="{{ card.images.small }}" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
